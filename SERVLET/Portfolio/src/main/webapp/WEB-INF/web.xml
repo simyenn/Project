@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee; https://java.sun.com/xml/ns/javaee/web-app_4_0.xsd">
+<!-- 	<security-role> -->
+<!-- 		<description></description > -->
+<!-- 		<role-name>admin</role-name> -->
+<!-- 	</security-role> -->
+<!-- 	<security-constraint> -->
+<!-- 		<display-name>Portfolio Security</display-name> -->
+<!-- 		<web-resource-collection> -->
+<!-- 			<web-resource-name>Portfolio</web-resource-name> -->
+<!-- 			<description></description> -->
+<!-- 			<url-pattern>/index.jsp</url-pattern> -->
+<!-- 		</web-resource-collection> -->
+<!-- 		<auth-constraint> -->
+<!-- 			<description>권한 관리자명</description> -->
+<!-- 			<role-name>admin</role-name> -->
+<!-- 		</auth-constraint> -->
+<!-- 	</security-constraint> -->
+<!-- 	<login-config> -->
+<!-- 		<auth-method>FORM</auth-method> -->
+<!-- 		<form-login-config> -->
+<!-- 			<form-login-page>/member/login.jsp</form-login-page> -->
+<!-- 			<form-error-page>/member/login_failed.jsp</form-error-page> -->
+<!-- 		</form-login-config> -->
+<!-- 	</login-config> -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/exceptionNoPage.jsp</location>
+	</error-page>
+	
+	<servlet>
+		<servlet-name>BoardController</servlet-name>
+		<servlet-class>mvc.controller.BoardController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BoardController</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
